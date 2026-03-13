@@ -576,7 +576,7 @@ export default function LandingPage() {
         <div className="max-w-[1200px] mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             <div className="col-span-1">
-              <a href="#" className="block mb-6">
+              <a href="#" className="block mb-6 -ml-2.5 -mt-2.5">
                 <img src={logoBranco} alt="iDru Logo" className="h-14 md:h-16 w-auto" />
               </a>
               <p className="text-idru-slate-500 text-[15px] max-w-xs">
