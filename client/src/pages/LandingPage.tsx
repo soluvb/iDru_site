@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 import zeladorChuva from "@assets/Zelador_chuva_1773424579435.jpg";
-import graficoIdruCompleto from "@assets/Gráfico_iDru_completo_1773424579438.png";
+import graficoIdru from "@assets/Gráfico_iDru_1773427982000.png";
 import semAgua from "@assets/Sem_água_site_1773427357418.png";
 import versaoDevice from "@assets/Versão_2_jan26_1773424579443.jpg";
 
@@ -171,13 +171,26 @@ export default function LandingPage() {
             
             {/* Row 1 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-24">
-              <div className="order-2 lg:order-1 relative">
-                <div className="absolute inset-0 bg-idru-blue-subtle/50 rounded-[2.5rem] transform -rotate-2 scale-105"></div>
-                <img 
-                  src={graficoIdruCompleto} 
-                  alt="Gráfico de monitoramento iDru" 
-                  className="relative z-10 w-full max-w-[340px] mx-auto rounded-3xl shadow-[0_16px_48px_rgba(0,0,0,0.10)] border border-idru-slate-200"
-                />
+              <div className="order-2 lg:order-1 relative flex justify-center">
+                <div className="absolute inset-0 bg-idru-blue-subtle/50 rounded-[2.5rem] transform -rotate-2 scale-105 max-w-[340px] mx-auto"></div>
+                <div className="relative z-10 w-full max-w-[340px]">
+                  <img 
+                    src={graficoIdru} 
+                    alt="Gráfico de monitoramento iDru" 
+                    className="w-full rounded-3xl shadow-[0_16px_48px_rgba(0,0,0,0.10)] border border-idru-slate-200"
+                  />
+                  
+                  {/* Floating badges */}
+                  <div className="absolute top-1/4 -right-4 md:-right-8 bg-white rounded-xl p-3 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.10)] border-l-4 border-idru-green flex items-center gap-2 animate-[bounce_4s_infinite]">
+                    <CheckCircle className="text-idru-green" size={20} strokeWidth={2.5} />
+                    <span className="font-bold text-idru-slate-800 text-[13px] whitespace-nowrap">100% Cheio</span>
+                  </div>
+                  
+                  <div className="absolute bottom-1/4 -left-4 md:-left-8 bg-white rounded-xl p-3 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.10)] border-l-4 border-idru-orange flex items-center gap-2 animate-[bounce_3s_infinite]">
+                    <AlertTriangle className="text-idru-orange" size={20} strokeWidth={2.5} />
+                    <span className="font-bold text-idru-slate-800 text-[13px] whitespace-nowrap">Nível Baixo</span>
+                  </div>
+                </div>
               </div>
               <div className="order-1 lg:order-2 flex flex-col gap-6">
                 <FeatureCard 
