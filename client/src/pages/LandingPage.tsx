@@ -502,9 +502,6 @@ export default function LandingPage() {
                     <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-idru-blue shrink-0">
                       <ShieldCheck size={32} strokeWidth={1.5} />
                     </div>
-                    <div className="font-black text-[64px] text-white/20 leading-none select-none">
-                      4
-                    </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 leading-snug">Garantia e Monitoramento Contínuo</h3>
                   <p className="text-blue-50 text-[16px] leading-relaxed">Seu condomínio passa a ser monitorado 24 horas por dia. Nossa equipe acompanha os dados e qualquer anomalia gera alertas imediatos para que você possa agir antes que falte água.</p>
