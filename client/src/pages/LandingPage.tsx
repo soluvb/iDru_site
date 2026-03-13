@@ -16,6 +16,10 @@ import zeladorChuva from "@assets/Zelador_chuva_site_1773428455055.png";
 import graficoIdru from "@assets/Gráfico_iDru_1773427982000.png";
 import semAgua from "@assets/Sem_água_site_1773427357418.png";
 import versaoDevice from "@assets/Versão_2_jan26_1773424579443.jpg";
+import tiagoIcon from "@assets/image_1773432433488.png";
+import tiagoImage from "@assets/image_1773432642675.png";
+import sergioImage from "../assets/sergio.png";
+import matheusImage from "../assets/matheus.png";
 
 const WhatsappIcon = ({ className }: { className?: string }) => (
   <svg 
@@ -376,35 +380,66 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  text: "Desde que instalamos o iDru, nossas preocupações com falta d'água acabaram! O sistema é confiável e os alertas são muito úteis.",
-                  author: "Cristiane",
-                  role: "Síndica – Condomínio De Leon (ITJ)"
+                  text: "Além de serem meus parceiros, o pessoal é rápido e efetivo nas manutenções. Sempre que marcam, comparecem e resolvem.\nCom certeza recomendo!",
+                  author: "Tiago Jacaré",
+                  role: "Hidro&Eletro Jacaré",
+                  link: "https://www.instagram.com/hidroeletrojacare/",
+                  image: tiagoIcon
                 },
                 {
                   text: "Depois que instalamos o iDru, nunca mais tivemos surpresa com falta d'água. Os alertas chegam antes do problema acontecer.",
                   author: "Tiago",
-                  role: "Coordenador – IFSC Itajaí"
+                  role: "Coordenador – IFSC Itajaí",
+                  image: tiagoImage
                 },
                 {
                   text: "A equipe da iDru foi muito profissional na instalação e o suporte é excelente. Recomendo!",
                   author: "Sérgio",
-                  role: "Síndico Profissional (BC, NVG e ITJ)"
+                  role: "Síndico Profissional (BC, NVG e ITJ)",
+                  image: sergioImage
                 },
                 {
                   text: "Ficava o dia todo subindo e descendo pra checar a caixa. Agora só olho no celular. Ganhamos tempo e evitamos problema.",
                   author: "Matheus",
-                  role: "Zelador – Art de Viver (ITJ)"
+                  role: "Zelador – Art de Viver (ITJ)",
+                  image: matheusImage
                 }
               ].map((testimonial, i) => (
-                <div key={i} className="bg-white rounded-2xl p-8 border border-idru-slate-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] relative z-0">
-                  <div className="absolute -top-4 -left-2 text-[#DBEAFE] font-serif text-[6rem] leading-none opacity-50 -z-10 select-none">"</div>
-                  <p className="text-idru-slate-800 text-lg leading-relaxed mb-6 font-medium">"{testimonial.text}"</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-idru-blue-subtle flex items-center justify-center text-idru-blue font-bold">
-                      {testimonial.author.charAt(0)}
-                    </div>
+                <div key={i} className="bg-white rounded-2xl p-8 border border-idru-slate-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] relative z-0 flex flex-col justify-between">
+                  <div>
+                    <div className="absolute -top-4 -left-2 text-[#DBEAFE] font-serif text-[6rem] leading-none opacity-50 -z-10 select-none">"</div>
+                    <p className="text-idru-slate-800 text-lg leading-relaxed mb-6 font-medium whitespace-pre-line">"{testimonial.text}"</p>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    {testimonial.image ? (
+                      <div className="relative">
+                        <img 
+                          src={testimonial.image} 
+                          alt={testimonial.author} 
+                          className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm"
+                        />
+                        {/* Only render secondary icon if it exists */}
+                        {(testimonial as any).icon && (
+                          <img 
+                            src={(testimonial as any).icon} 
+                            alt="Logo" 
+                            className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-white border border-white shadow-sm object-cover"
+                          />
+                        )}
+                      </div>
+                    ) : (
+                      <div className="w-12 h-12 rounded-full bg-idru-blue-subtle flex items-center justify-center text-idru-blue font-bold text-lg border-2 border-white shadow-sm">
+                        {testimonial.author.charAt(0)}
+                      </div>
+                    )}
                     <div>
-                      <h4 className="font-bold text-idru-slate-800 text-[15px]">{testimonial.author}</h4>
+                      {testimonial.link ? (
+                        <a href={testimonial.link} target="_blank" rel="noreferrer" className="font-bold text-idru-slate-800 text-[15px] hover:text-idru-blue transition-colors">
+                          {testimonial.author}
+                        </a>
+                      ) : (
+                        <h4 className="font-bold text-idru-slate-800 text-[15px]">{testimonial.author}</h4>
+                      )}
                       <p className="text-sm text-idru-slate-500">{testimonial.role}</p>
                     </div>
                   </div>
