@@ -129,7 +129,7 @@ export default function LandingPage() {
             </div>
             
             {/* Col 2 */}
-            <div className="relative animate-in fade-in slide-in-from-bottom-12 duration-700 delay-150">
+            <div className="relative animate-in fade-in slide-in-from-bottom-12 duration-700 delay-150 transform scale-[0.85] origin-center">
               <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border-4 border-white">
                 <img 
                   src={semAgua} 
