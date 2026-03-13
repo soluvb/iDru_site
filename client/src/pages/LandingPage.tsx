@@ -18,6 +18,8 @@ import semAgua from "@assets/Sem_água_site_1773427357418.png";
 import versaoDevice from "@assets/Versão_2_jan26_1773424579443.jpg";
 import tiagoIcon from "@assets/image_1773432433488.png";
 import tiagoImage from "@assets/image_1773432642675.png";
+import logoPreto from "@assets/iDru_Preto_(transp)_1773434513692.png";
+import logoBranco from "@assets/iDru_Branco_(transp)_1773434513694.png";
 import sergioImage from "../assets/sergio.png";
 import matheusImage from "../assets/matheus.png";
 
@@ -119,8 +121,8 @@ export default function LandingPage() {
       {/* Sticky Navbar */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-idru-slate-200 h-[72px] flex items-center transition-all duration-300 shadow-[0_1px_0_rgba(0,0,0,0.06)]">
         <div className="max-w-[1200px] w-full mx-auto px-8 flex items-center justify-between">
-          <a href="#" className="font-black text-2xl text-[#1E3A8A] tracking-tight">
-            iDru<span className="text-idru-blue-light">.</span>
+          <a href="#" className="flex items-center">
+            <img src={logoPreto} alt="iDru Logo" className="h-8 md:h-10 w-auto" />
           </a>
           
           <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium text-idru-slate-800">
@@ -574,8 +576,8 @@ export default function LandingPage() {
         <div className="max-w-[1200px] mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             <div className="col-span-1">
-              <a href="#" className="font-black text-3xl text-white tracking-tight block mb-4">
-                iDru<span className="text-idru-blue-light">.</span>
+              <a href="#" className="block mb-6">
+                <img src={logoBranco} alt="iDru Logo" className="h-10 md:h-12 w-auto" />
               </a>
               <p className="text-idru-slate-500 text-[15px] max-w-xs">
                 Inteligência no controle da água.
