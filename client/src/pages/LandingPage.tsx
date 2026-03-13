@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { 
   Wifi, 
   AlertTriangle, 
@@ -8,7 +8,8 @@ import {
   PackageCheck, 
   HeadphonesIcon,
   CheckCircle,
-  MessageCircle
+  MessageCircle,
+  Send
 } from "lucide-react";
 
 import zeladorChuva from "@assets/Zelador_chuva_site_1773428455055.png";
@@ -84,7 +85,31 @@ const EMOJI_CONFIG_ZELADOR = [
 
 export default function LandingPage() {
   const whatsappUrl = "https://wa.me/5547999999999";
-  
+  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      q: "Quanto custa instalar a iDru?",
+      a: "Planos a partir de R$ 0,99 por apartamento."
+    },
+    {
+      q: "Precisa quebrar alguma tubulação?",
+      a: "Sem quebrar canos. Nossos sensores importados são instalados sem gerar mudanças estruturais nas caixas e cisternas."
+    },
+    {
+      q: "Funciona em qualquer reservatório?",
+      a: "Qualquer reservatório e de qualquer tamanho. Como nós fazemos a instalação, garantimos que a aferição está sendo feita de forma correta."
+    },
+    {
+      q: "Como recebo os alertas?",
+      a: "Oferecemos um app próprio, feito especificamente para esse tipo de mensagem, para evitar conflito com outros apps do dia a dia."
+    },
+    {
+      q: "O que acontece se faltar internet?",
+      a: "Os sensores continuam coletando os dados, mesmo sem sinal! Assim que o dispositivo volta a ter acesso novamente, os dados coletados são sincronizados com o app."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-idru-bg-b text-idru-slate-500 font-sans selection:bg-idru-blue-subtle selection:text-idru-blue overflow-x-hidden">
       {/* Sticky Navbar */}
@@ -276,28 +301,62 @@ export default function LandingPage() {
             </h2>
             
             {/* Chat UI Component */}
-            <div className="w-full max-w-[640px] bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.10)] border border-idru-slate-200 overflow-hidden">
+            <div className="w-full max-w-[640px] bg-white rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.10)] border border-idru-slate-200 overflow-hidden flex flex-col">
               <div className="px-6 py-5 border-b border-idru-slate-100 flex items-center gap-3">
                 <div className="w-2.5 h-2.5 rounded-full bg-idru-blue-light animate-pulse"></div>
                 <h3 className="font-semibold text-idru-slate-800 text-[15px]">Pergunte-me qualquer coisa sobre iDru</h3>
               </div>
-              <div className="p-2 flex flex-col">
-                {[
-                  "Quanto custa instalar a iDru?",
-                  "Precisa quebrar alguma tubulação?",
-                  "Funciona em qualquer reservatório?",
-                  "Como recebo os alertas?",
-                  "O que acontece se faltar internet?"
-                ].map((prompt, i) => (
-                  <button 
-                    key={i}
-                    onClick={() => window.open(whatsappUrl, '_blank')}
-                    className="text-left px-5 py-3.5 text-[15px] text-idru-slate-500 font-medium border-l-[3px] border-transparent hover:border-idru-blue hover:bg-idru-blue-subtle hover:text-idru-blue transition-all duration-200 rounded-r-lg group flex items-center justify-between"
-                  >
-                    {prompt}
-                    <MessageCircle size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </button>
+              <div className="p-2 flex flex-col flex-grow max-h-[400px] overflow-y-auto">
+                {faqs.map((faq, i) => (
+                  <div key={i} className="flex flex-col">
+                    <button 
+                      onClick={() => setActiveQuestion(activeQuestion === i ? null : i)}
+                      className={`text-left px-5 py-3.5 text-[15px] font-medium border-l-[3px] transition-all duration-200 rounded-r-lg group flex items-center justify-between
+                        ${activeQuestion === i 
+                          ? 'border-idru-blue bg-idru-blue-subtle text-idru-blue' 
+                          : 'text-idru-slate-500 border-transparent hover:border-idru-blue hover:bg-idru-blue-subtle hover:text-idru-blue'
+                        }`}
+                    >
+                      {faq.q}
+                      <MessageCircle size={16} className={`transition-all duration-300 ${activeQuestion === i ? 'opacity-100 scale-110' : 'opacity-0 group-hover:opacity-100'}`} />
+                    </button>
+                    
+                    <div 
+                      className={`overflow-hidden transition-all duration-300 ease-in-out px-5 ${
+                        activeQuestion === i ? 'max-h-40 py-4 opacity-100' : 'max-h-0 py-0 opacity-0'
+                      }`}
+                    >
+                      <div className="pl-4 border-l-2 border-idru-blue/20">
+                        <p className="text-idru-slate-600 text-[14px] leading-relaxed">
+                          {faq.a}
+                        </p>
+                        <a 
+                          href={whatsappUrl} 
+                          target="_blank" 
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-idru-blue hover:text-[#1D4ED8] hover:underline"
+                        >
+                          Quero saber mais!
+                          <span className="text-xs transition-transform duration-200 group-hover:translate-x-1">→</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 ))}
+              </div>
+              
+              <div className="p-4 border-t border-idru-slate-100 bg-idru-bg-a">
+                <a 
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between w-full bg-white border border-idru-slate-200 rounded-full px-5 py-3 text-idru-slate-500 hover:border-idru-blue hover:text-idru-blue hover:shadow-sm transition-all group"
+                >
+                  <span className="text-sm">Faça sua pergunta...</span>
+                  <div className="bg-idru-blue text-white rounded-full p-1.5 group-hover:scale-110 transition-transform">
+                    <Send size={14} />
+                  </div>
+                </a>
               </div>
             </div>
             
