@@ -52,6 +52,21 @@ const FeatureCard = ({ icon: Icon, title, description, colorClass = "text-idru-b
   </div>
 );
 
+const EMOJI_CONFIG = [
+  { emoji: "🤬", left: "-5%", delay: "0s", duration: "4s", size: "text-3xl" },
+  { emoji: "🚨", left: "15%", delay: "1.2s", duration: "3.5s", size: "text-4xl" },
+  { emoji: "😡", left: "30%", delay: "0.5s", duration: "4.2s", size: "text-3xl" },
+  { emoji: "👎", left: "45%", delay: "2.1s", duration: "3.8s", size: "text-2xl" },
+  { emoji: "😤", left: "60%", delay: "1.5s", duration: "4.5s", size: "text-4xl" },
+  { emoji: "🔔", left: "75%", delay: "3s", duration: "3.2s", size: "text-2xl" },
+  { emoji: "🤬", left: "90%", delay: "2.5s", duration: "4s", size: "text-3xl" },
+  { emoji: "⚠️", left: "100%", delay: "0.8s", duration: "3.9s", size: "text-4xl" },
+  { emoji: "😡", left: "10%", delay: "3.5s", duration: "4.1s", size: "text-3xl" },
+  { emoji: "👎", left: "85%", delay: "4s", duration: "3.6s", size: "text-4xl" },
+  { emoji: "🔔", left: "55%", delay: "0.2s", duration: "3.3s", size: "text-3xl" },
+  { emoji: "🤬", left: "20%", delay: "4.5s", duration: "4.8s", size: "text-5xl" },
+];
+
 export default function LandingPage() {
   const whatsappUrl = "https://wa.me/5547999999999";
   
@@ -125,15 +140,22 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               
-              {/* Floating badges */}
-              <div className="absolute -top-6 -right-6 md:-right-8 bg-white rounded-xl p-3 md:p-4 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.10)] border-l-4 border-idru-green flex items-center gap-3 animate-[bounce_4s_infinite]">
-                <CheckCircle className="text-idru-green" size={24} strokeWidth={2.5} />
-                <span className="font-bold text-idru-slate-800 text-[15px] whitespace-nowrap">100% Cheio</span>
-              </div>
-              
-              <div className="absolute -bottom-6 -left-6 md:-left-8 bg-white rounded-xl p-3 md:p-4 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.10)] border-l-4 border-idru-orange flex items-center gap-3 animate-[bounce_3s_infinite]">
-                <AlertTriangle className="text-idru-orange" size={24} strokeWidth={2.5} />
-                <span className="font-bold text-idru-slate-800 text-[15px] whitespace-nowrap">Nível Baixo</span>
+              {/* Floating Emojis replacing previous badges */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl">
+                {EMOJI_CONFIG.map((conf, i) => (
+                  <div
+                    key={i}
+                    className={`absolute bottom-0 emoji-float ${conf.size}`}
+                    style={{
+                      left: conf.left,
+                      animationDelay: conf.delay,
+                      animationDuration: conf.duration,
+                      textShadow: "0 2px 10px rgba(0,0,0,0.2)"
+                    }}
+                  >
+                    {conf.emoji}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
