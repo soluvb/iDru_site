@@ -97,7 +97,7 @@ export default function LandingPage() {
       </header>
       <main>
         {/* Section 1 — Hero */}
-        <section id="inicio" className="bg-pattern relative md:pt-24 md:pb-32 overflow-hidden border-b border-idru-slate-200/50 pt-[10px] pb-[30px]">
+        <section id="inicio" className="bg-pattern relative md:pt-24 md:pb-32 overflow-hidden border-b border-idru-slate-200/50 pt-[0px] pb-[20px]">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-idru-blue-subtle rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
           
           <div className="max-w-[1200px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-[55%_45%] gap-16 items-center relative z-10">
