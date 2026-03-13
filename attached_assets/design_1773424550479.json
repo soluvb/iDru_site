@@ -1,0 +1,510 @@
+{
+  "designPrinciples": {
+    "overall": "Premium calm-tech SaaS for water intelligence. The design should feel like a trusted operations partner for condo managers — reassuring, clear-headed, and modern. Never industrial. Never alarmist. Always data-driven and quietly confident.",
+    "keywords": [
+      "calm-tech",
+      "trustworthy",
+      "clean",
+      "intelligent",
+      "action-oriented",
+      "SaaS-grade"
+    ],
+    "avoid": [
+      "industrial or government aesthetic",
+      "cold dark interfaces",
+      "cluttered or busy card grids",
+      "passive or generic CTAs",
+      "overly playful or cartoon-like visuals",
+      "heavy drop shadows that feel dated"
+    ]
+  },
+
+  "colorPalette": {
+    "primary": {
+      "blue": "#2563EB",
+      "blueLight": "#3B82F6",
+      "blueDark": "#1D4ED8"
+    },
+    "neutral": {
+      "white": "#FFFFFF",
+      "cloudGray": "#F8FAFC",
+      "lightSlate": "#F1F5F9",
+      "borderGray": "#E2E8F0",
+      "textSecondary": "#64748B",
+      "textPrimary": "#1E293B",
+      "darkNavy": "#0F172A"
+    },
+    "status": {
+      "success": "#22C55E",
+      "successLight": "#DCFCE7",
+      "warning": "#F97316",
+      "warningLight": "#FFEDD5"
+    },
+    "accent": {
+      "blueSubtle": "#EFF6FF",
+      "blueMid": "#DBEAFE",
+      "purple": "#E8E9FF"
+    },
+    "whatsapp": "#25D366",
+    "usage": {
+      "backgrounds": [
+        "#F8FAFC for Hero and How It Works (with dot SVG pattern overlay)",
+        "#FFFFFF for Why iDru, Social Proof, and Final CTA sections",
+        "#E8E9FF for iDru Answers and How It Works accent sections",
+        "#0F172A for Footer"
+      ],
+      "text": {
+        "headings": "#1E293B on light backgrounds, #FFFFFF on dark backgrounds",
+        "body": "#64748B on light backgrounds, rgba(255,255,255,0.75) on dark",
+        "accent": "#2563EB for highlighted words, links, and icon accents"
+      },
+      "buttons": {
+        "primary": "#2563EB background with #FFFFFF text, pill-shaped (rounded-full)",
+        "primaryOnDark": "#FFFFFF background with #2563EB text",
+        "whatsapp": "#25D366 background with #FFFFFF text, pill-shaped",
+        "secondary": "transparent background with #1E293B border and text"
+      }
+    }
+  },
+
+  "typography": {
+    "fontFamilies": {
+      "headings": {
+        "family": "Inter",
+        "weight": "800–900",
+        "style": "Apply color #2563EB to 1–2 key words in H1 to create visual anchor. Example: 'Deixe de ser o último a saber que a água acabou.' — highlight 'último' in blue."
+      },
+      "body": {
+        "family": "Inter",
+        "weight": "400 for body, 500 for subtitles and emphasis"
+      }
+    },
+    "scale": {
+      "hero-h1": {
+        "size": "clamp(2.5rem, 5vw, 4rem)",
+        "lineHeight": "1.1",
+        "letterSpacing": "-0.03em",
+        "weight": "900"
+      },
+      "h2": {
+        "size": "clamp(1.875rem, 3.5vw, 2.75rem)",
+        "lineHeight": "1.15",
+        "letterSpacing": "-0.02em",
+        "weight": "800"
+      },
+      "h3": {
+        "size": "1.25rem",
+        "lineHeight": "1.4",
+        "weight": "600"
+      },
+      "body": {
+        "size": "1rem–1.125rem",
+        "lineHeight": "1.65"
+      },
+      "small": {
+        "size": "0.875rem",
+        "lineHeight": "1.5"
+      }
+    },
+    "emphasis": {
+      "technique": "Single-word color highlight in H1 using #2563EB. No underline — the color weight is sufficient.",
+      "example": "Deixe de ser o último a saber que a água acabou."
+    }
+  },
+
+  "spacing": {
+    "philosophy": "Generous breathing room with strong visual hierarchy. White space communicates confidence and technological precision.",
+    "sectionPadding": {
+      "vertical": "clamp(80px, 10vw, 140px)",
+      "horizontal": "clamp(20px, 5vw, 80px)"
+    },
+    "containerMaxWidth": "1200px",
+    "componentSpacing": {
+      "betweenSections": "0 (each section self-pads)",
+      "betweenHeadingAndContent": "24px–40px",
+      "betweenCards": "24px–32px",
+      "insideCards": "32px–40px"
+    },
+    "grid": {
+      "columns": "12-column grid",
+      "gutter": "24px–32px"
+    }
+  },
+
+  "components": {
+    "navbar": {
+      "background": "#FFFFFF",
+      "position": "sticky top-0 z-50",
+      "shadow": "0 1px 0 rgba(0,0,0,0.06) on scroll",
+      "height": "72px",
+      "logo": {
+        "text": "iDru.",
+        "fontFamily": "Inter Black",
+        "fontWeight": "900",
+        "color": "#1E3A8A",
+        "dotColor": "#3B82F6"
+      },
+      "links": "right-aligned, color #1E293B, hover:color #2563EB, transition 0.2s",
+      "cta": {
+        "text": "Fale pelo WhatsApp",
+        "background": "#25D366",
+        "color": "#FFFFFF",
+        "borderRadius": "100px",
+        "padding": "10px 24px",
+        "fontWeight": "600"
+      }
+    },
+
+    "buttons": {
+      "primary": {
+        "background": "#2563EB",
+        "text": "#FFFFFF",
+        "borderRadius": "100px",
+        "padding": "16px 36px",
+        "fontSize": "0.9375rem",
+        "fontWeight": "600",
+        "hover": {
+          "background": "#1D4ED8",
+          "transform": "translateY(-2px)",
+          "shadow": "0 6px 20px rgba(37, 99, 235, 0.35)"
+        },
+        "transition": "all 0.25s ease"
+      },
+      "whatsapp": {
+        "background": "#25D366",
+        "text": "#FFFFFF",
+        "borderRadius": "100px",
+        "padding": "16px 36px",
+        "fontWeight": "600",
+        "icon": "WhatsApp SVG or Phone icon from Lucide",
+        "hover": {
+          "background": "#1fba58",
+          "transform": "translateY(-2px)"
+        }
+      },
+      "primaryOnDark": {
+        "background": "#FFFFFF",
+        "text": "#2563EB",
+        "borderRadius": "100px",
+        "padding": "16px 36px",
+        "fontWeight": "700",
+        "hover": {
+          "background": "#EFF6FF",
+          "transform": "translateY(-2px)"
+        }
+      },
+      "secondary": {
+        "background": "transparent",
+        "text": "#1E293B",
+        "border": "1.5px solid #1E293B",
+        "borderRadius": "100px",
+        "hover": {
+          "background": "#1E293B",
+          "text": "#FFFFFF"
+        }
+      }
+    },
+
+    "cards": {
+      "default": {
+        "background": "#FFFFFF",
+        "borderRadius": "20px",
+        "padding": "32px",
+        "shadow": "0 2px 8px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06)",
+        "border": "1px solid rgba(0,0,0,0.06)"
+      },
+      "elevated": {
+        "background": "#FFFFFF",
+        "borderRadius": "24px",
+        "shadow": "0 4px 16px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.10)"
+      },
+      "statusFloating": {
+        "background": "#FFFFFF",
+        "borderRadius": "12px",
+        "padding": "12px 20px",
+        "shadow": "0 10px 15px -3px rgba(0,0,0,0.10)",
+        "variants": {
+          "success": {
+            "borderLeft": "4px solid #22C55E",
+            "icon": "CheckCircle (green-500)",
+            "label": "100% Cheio"
+          },
+          "warning": {
+            "borderLeft": "4px solid #F97316",
+            "icon": "AlertTriangle (orange-500)",
+            "label": "Nível Baixo"
+          }
+        },
+        "animation": "animate-bounce (3s and 4s infinite, staggered)"
+      },
+      "testimonial": {
+        "background": "#FFFFFF",
+        "borderRadius": "20px",
+        "padding": "32px",
+        "shadow": "0 2px 8px rgba(0,0,0,0.04)",
+        "border": "1px solid #E2E8F0",
+        "quoteAccent": {
+          "color": "#DBEAFE",
+          "fontSize": "4rem",
+          "fontWeight": "900"
+        }
+      },
+      "hover": {
+        "transform": "translateY(-4px)",
+        "borderColor": "rgba(37,99,235,0.2)",
+        "shadow": "0 8px 32px rgba(37,99,235,0.10)",
+        "transition": "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    },
+
+    "icons": {
+      "library": "Lucide React",
+      "strokeWidth": "1.75",
+      "sizes": {
+        "small": "20px",
+        "default": "24px",
+        "large": "32px",
+        "feature": "32px (in feature cards)"
+      },
+      "container": {
+        "background": "#EFF6FF",
+        "color": "#2563EB",
+        "borderRadius": "12px",
+        "padding": "14px"
+      }
+    },
+
+    "badges": {
+      "pill": {
+        "background": "#EFF6FF",
+        "text": "#1D4ED8",
+        "borderRadius": "100px",
+        "padding": "6px 14px",
+        "fontSize": "0.75rem",
+        "fontWeight": "600",
+        "textTransform": "uppercase",
+        "letterSpacing": "0.06em",
+        "example": "💧 Monitoramento Hídrico Inteligente"
+      }
+    },
+
+    "chatPromptUI": {
+      "container": {
+        "background": "#FFFFFF",
+        "borderRadius": "24px",
+        "shadow": "0 4px 24px rgba(0,0,0,0.10)",
+        "border": "1px solid #E2E8F0",
+        "maxWidth": "640px"
+      },
+      "header": {
+        "text": "Pergunte-me qualquer coisa sobre iDru",
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "color": "#1E293B",
+        "padding": "20px 24px",
+        "borderBottom": "1px solid #F1F5F9",
+        "pulsingDot": {
+          "color": "#3B82F6",
+          "animation": "animate-pulse"
+        }
+      },
+      "promptItem": {
+        "padding": "14px 20px",
+        "fontSize": "0.9375rem",
+        "color": "#64748B",
+        "borderLeft": "3px solid transparent",
+        "hover": {
+          "background": "#EFF6FF",
+          "color": "#2563EB",
+          "borderLeftColor": "#2563EB",
+          "transition": "all 0.2s ease"
+        }
+      }
+    },
+
+    "statBanner": {
+      "number": {
+        "size": "3rem–4rem",
+        "weight": "900",
+        "color": "#2563EB"
+      },
+      "label": {
+        "size": "0.875rem",
+        "color": "#64748B"
+      },
+      "example": "\"3 cidades e 12 condomínios já monitorados com iDru\""
+    },
+
+    "howItWorksStep": {
+      "numberBadge": {
+        "background": "#2563EB",
+        "color": "#FFFFFF",
+        "borderRadius": "100px",
+        "size": "48px",
+        "fontWeight": "700"
+      },
+      "connectorLine": {
+        "style": "dashed",
+        "color": "#DBEAFE",
+        "height": "2px",
+        "position": "between step cards, centered vertically on number badge"
+      }
+    }
+  },
+
+  "imagery": {
+    "style": "Real product photography and candid editorial photography. Show the iDru device, real users (condo managers, janitors), and app screenshots. Avoid polished/staged stock photos.",
+    "treatment": {
+      "device": "Full-color product shots with clean backgrounds or subtle drop shadows",
+      "people": "Candid, slightly warm tone — not desaturated. Natural context (rooftop, tank, app in hand)",
+      "appScreenshots": "Use phone mockup frames (rounded-3xl, dark bezel) — see Gráfico_iDru and Gráfico_iDru_completo",
+      "backgrounds": "Never full-bleed images as section backgrounds — prefer contained image blocks with generous negative space"
+    },
+    "imageFiles": {
+      "heroImage": "Sem_água.png — person in shower with no water (no water anxiety scenario)",
+      "chartFull": "Gráfico_iDru_completo.png — full app chart with alert states shown",
+      "chart": "Gráfico_iDru.png — cleaner app chart view",
+      "zelador": "Zelador_chuva.jpg — janitor climbing water tank in a storm (problem visualization)",
+      "device": "Versão_2_jan26.jpg — iDru hardware device photo",
+      "statusFull": "Cheio.png — 100% Cheio badge reference",
+      "statusLow": "Vazio.png — Nível Baixo badge reference"
+    }
+  },
+
+  "backgrounds": {
+    "pattern": {
+      "type": "SVG dot/circle pattern",
+      "opacity": "0.07",
+      "color": "#94a3b8",
+      "svgUrl": "data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z' fill='%2394a3b8' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E"
+    },
+    "sections": {
+      "hero": "#F8FAFC + SVG dot pattern",
+      "whyIDru": "#FFFFFF clean",
+      "answers": "#E8E9FF clean",
+      "socialProof": "#FFFFFF clean",
+      "howItWorks": "#E8E9FF + SVG dot pattern",
+      "finalCTA": "#FFFFFF clean",
+      "footer": "#0F172A dark"
+    },
+    "decorativeBlur": {
+      "hero": "Absolute div: 600px circle, bg-blue-50, blur-3xl, opacity-50 — top-right corner",
+      "purpose": "Adds warmth without competing with content"
+    }
+  },
+
+  "animations": {
+    "philosophy": "Purposeful and subtle. Motion should guide attention and confirm interaction, not entertain. Never slow or decorative for its own sake.",
+    "types": {
+      "fadeInUp": {
+        "initial": "opacity: 0, translateY: 24px",
+        "animate": "opacity: 1, translateY: 0",
+        "duration": "0.5s",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "trigger": "IntersectionObserver (threshold: 0.15)"
+      },
+      "hoverLift": {
+        "transform": "translateY(-4px)",
+        "duration": "0.25s"
+      },
+      "stagger": {
+        "delayBetween": "0.08s",
+        "use": "Feature card grids, testimonial cards, step cards"
+      },
+      "statusBadgeBounce": {
+        "type": "CSS animate-bounce",
+        "badge1Duration": "3s infinite",
+        "badge2Duration": "4s infinite",
+        "use": "Floating status cards on Hero image"
+      }
+    },
+    "microInteractions": {
+      "buttons": "scale(1.03) on hover + shadow intensifies",
+      "cards": "translateY(-4px) + blue border highlight on hover",
+      "navLinks": "color transitions to #2563EB on hover",
+      "chatPromptItems": "left blue border slides in + background tint on hover",
+      "pulsingDot": "animate-pulse on navbar/chat header status indicators"
+    }
+  },
+
+  "layout": {
+    "philosophy": "Content-first with editorial proportions. Strong column rhythm, generous breathing room. Each section has a clear visual anchor (image, stat, or interactive component).",
+    "hero": {
+      "layout": "Two columns, 55/45 split",
+      "textAlignment": "left",
+      "imagePosition": "Column 2 — with floating status badge overlays"
+    },
+    "whyIDru": {
+      "layout": "Two sub-rows: [image | cards] and [cards | image]",
+      "imageFraming": "rounded-2xl, shadow-lg, slight rotation on zelador image (-1deg)"
+    },
+    "featureCards": {
+      "grid": "1 column stacked within 2-col section on desktop, full-width on mobile",
+      "alignment": "Icon top-left in colored container, title + description left-aligned below"
+    },
+    "testimonials": {
+      "grid": "2 columns on desktop, 1 on mobile",
+      "cardAlignment": "Quote mark large and faded top-left, attribution bottom"
+    },
+    "howItWorks": {
+      "layout": "3 horizontal steps with connecting dashed line on desktop, vertical on mobile",
+      "ctaPosition": "Centered below steps"
+    },
+    "finalCTA": {
+      "layout": "2 columns: text+CTA left, device image right",
+      "textMaxWidth": "520px"
+    }
+  },
+
+  "trustElements": {
+    "stats": {
+      "style": "Large bold numbers in #2563EB, smaller muted label below",
+      "numberSize": "3rem–4rem",
+      "labelSize": "0.875rem",
+      "color": "#2563EB",
+      "example": "12 condomínios · 3 cidades"
+    },
+    "statusBadges": {
+      "cheio": {
+        "icon": "CheckCircle (Lucide)",
+        "iconColor": "#22C55E",
+        "label": "100% Cheio",
+        "border": "4px left solid #22C55E"
+      },
+      "baixo": {
+        "icon": "AlertTriangle (Lucide)",
+        "iconColor": "#F97316",
+        "label": "Nível Baixo",
+        "border": "4px left solid #F97316"
+      }
+    }
+  },
+
+  "footer": {
+    "background": "#0F172A",
+    "textColor": "#FFFFFF",
+    "mutedTextColor": "rgba(255,255,255,0.45)",
+    "layout": "3-column grid: Logo+tagline | Navigation | Legal",
+    "divider": "1px solid rgba(255,255,255,0.08)",
+    "logo": {
+      "text": "iDru.",
+      "tagline": "Inteligência no controle da água",
+      "taglineColor": "rgba(255,255,255,0.5)"
+    },
+    "legalNote": "empresa do grupo SoluVentures",
+    "links": ["Política de Privacidade", "Termos e Condições"],
+    "bottomBar": {
+      "text": "© 2025 iDru. Todos os direitos reservados.",
+      "fontSize": "0.8rem",
+      "color": "rgba(255,255,255,0.4)"
+    }
+  },
+
+  "whatsappCTA": {
+    "linkTemplate": "https://wa.me/5547XXXXXXXXX",
+    "message": "Olá! Gostaria de saber mais sobre o iDru para o meu condomínio.",
+    "buttonText": "Agendar avaliação pelo WhatsApp",
+    "navText": "Fale pelo WhatsApp",
+    "color": "#25D366"
+  }
+}
