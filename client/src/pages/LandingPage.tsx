@@ -457,9 +457,6 @@ export default function LandingPage() {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative mb-16">
-              {/* Connector line (desktop only) */}
-              <div className="hidden md:block absolute top-[48px] left-[16%] right-[16%] h-[2px] bg-idru-blue-subtle border-t-2 border-dashed border-[#DBEAFE] -z-10"></div>
-              
               {[
                 {
                   icon: Phone,
@@ -477,15 +474,17 @@ export default function LandingPage() {
                   desc: "Assistência técnica, manutenção preventiva e capacitação sem custos adicionais."
                 }
               ].map((step, i) => (
-                <div key={i} className="flex flex-col items-center relative">
-                  <div className="w-12 h-12 rounded-full bg-idru-blue text-white flex items-center justify-center font-bold text-lg mb-6 shadow-md ring-8 ring-[#E8E9FF]">
-                    {i + 1}
+                <div key={i} className="bg-idru-blue rounded-3xl p-8 flex flex-col text-left shadow-lg">
+                  <div className="flex justify-between items-start w-full mb-8">
+                    <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-idru-blue">
+                      <step.icon size={32} strokeWidth={1.5} />
+                    </div>
+                    <div className="h-16 flex items-center justify-end font-black text-[64px] text-white/30 leading-none">
+                      {i + 1}
+                    </div>
                   </div>
-                  <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-idru-blue mb-6">
-                    <step.icon size={32} strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-xl font-semibold text-idru-slate-800 mb-3">{step.title}</h3>
-                  <p className="text-idru-slate-500 max-w-[280px]">{step.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-3 leading-snug">{step.title}</h3>
+                  <p className="text-blue-100 text-[15px] leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
