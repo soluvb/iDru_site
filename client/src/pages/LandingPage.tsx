@@ -474,19 +474,50 @@ export default function LandingPage() {
                   desc: "Assistência técnica, manutenção preventiva e capacitação sem custos adicionais."
                 }
               ].map((step, i) => (
-                <div key={i} className="bg-idru-blue rounded-3xl p-8 flex flex-col text-left shadow-lg">
-                  <div className="flex justify-between items-start w-full mb-8">
-                    <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-idru-blue">
+                <div key={i} className="bg-idru-blue rounded-3xl p-8 flex flex-col text-left shadow-lg relative overflow-hidden group">
+                  {/* Decorative background element */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-colors"></div>
+                  
+                  <div className="flex justify-between items-start w-full mb-8 relative z-10">
+                    <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-idru-blue shrink-0">
                       <step.icon size={32} strokeWidth={1.5} />
                     </div>
-                    <div className="h-16 flex items-center justify-end font-black text-[64px] text-white/30 leading-none">
+                    <div className="h-16 flex items-center justify-end font-black text-[64px] text-white/20 leading-none select-none">
                       {i + 1}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 leading-snug">{step.title}</h3>
-                  <p className="text-blue-100 text-[15px] leading-relaxed">{step.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-3 leading-snug relative z-10">{step.title}</h3>
+                  <p className="text-blue-50 text-[15px] leading-relaxed relative z-10">{step.desc}</p>
                 </div>
               ))}
+              
+              {/* Full width fourth card */}
+              <div className="md:col-span-3 bg-idru-blue rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between text-left shadow-lg relative overflow-hidden group gap-8 border-t border-white/10 mt-2">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-colors"></div>
+                
+                <div className="flex flex-col relative z-10 max-w-2xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-idru-blue shrink-0">
+                      <ShieldCheck size={32} strokeWidth={1.5} />
+                    </div>
+                    <div className="font-black text-[64px] text-white/20 leading-none select-none">
+                      4
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3 leading-snug">Garantia e Monitoramento Contínuo</h3>
+                  <p className="text-blue-50 text-[16px] leading-relaxed">Seu condomínio passa a ser monitorado 24 horas por dia. Nossa equipe acompanha os dados e qualquer anomalia gera alertas imediatos para que você possa agir antes que falte água.</p>
+                </div>
+                
+                <div className="relative z-10 shrink-0 w-full md:w-auto">
+                  <a 
+                    href={whatsappUrl}
+                    className="flex w-full md:w-auto items-center justify-center gap-2 bg-white text-idru-blue rounded-full px-8 py-4 font-bold text-[16px] hover:bg-blue-50 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(255,255,255,0.2)] transition-all"
+                  >
+                    Começar agora
+                    <span className="text-lg">→</span>
+                  </a>
+                </div>
+              </div>
             </div>
             
             <a 
