@@ -11,7 +11,7 @@ import {
   MessageCircle
 } from "lucide-react";
 
-import zeladorChuva from "@assets/Zelador_chuva_1773424579435.jpg";
+import zeladorChuva from "@assets/Zelador_chuva_site_1773428455055.png";
 import graficoIdru from "@assets/Gráfico_iDru_1773427982000.png";
 import semAgua from "@assets/Sem_água_site_1773427357418.png";
 import versaoDevice from "@assets/Versão_2_jan26_1773424579443.jpg";
@@ -65,6 +65,21 @@ const EMOJI_CONFIG = [
   { emoji: "👎", left: "85%", delay: "4s", duration: "3.6s", size: "text-4xl" },
   { emoji: "🔔", left: "55%", delay: "0.2s", duration: "3.3s", size: "text-3xl" },
   { emoji: "🤬", left: "20%", delay: "4.5s", duration: "4.8s", size: "text-5xl" },
+];
+
+const EMOJI_CONFIG_ZELADOR = [
+  { emoji: "⚡", left: "-5%", delay: "0s", duration: "4s", size: "text-3xl" },
+  { emoji: "🌧️", left: "15%", delay: "1.2s", duration: "3.5s", size: "text-4xl" },
+  { emoji: "🤕", left: "30%", delay: "0.5s", duration: "4.2s", size: "text-3xl" },
+  { emoji: "⚠️", left: "45%", delay: "2.1s", duration: "3.8s", size: "text-2xl" },
+  { emoji: "💧", left: "60%", delay: "1.5s", duration: "4.5s", size: "text-4xl" },
+  { emoji: "🌩️", left: "75%", delay: "3s", duration: "3.2s", size: "text-2xl" },
+  { emoji: "🧗", left: "90%", delay: "2.5s", duration: "4s", size: "text-3xl" },
+  { emoji: "🚨", left: "100%", delay: "0.8s", duration: "3.9s", size: "text-4xl" },
+  { emoji: "😨", left: "10%", delay: "3.5s", duration: "4.1s", size: "text-3xl" },
+  { emoji: "🌧️", left: "85%", delay: "4s", duration: "3.6s", size: "text-4xl" },
+  { emoji: "🚑", left: "55%", delay: "0.2s", duration: "3.3s", size: "text-3xl" },
+  { emoji: "⚡", left: "20%", delay: "4.5s", duration: "4.8s", size: "text-5xl" },
 ];
 
 export default function LandingPage() {
@@ -222,13 +237,32 @@ export default function LandingPage() {
                   colorClass="text-idru-green"
                 />
               </div>
-              <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.10)] transform -rotate-1">
                 <img 
                   src={zeladorChuva} 
                   alt="Zelador na chuva" 
-                  className="w-full rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.10)] transform -rotate-1 object-cover"
+                  className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10 pointer-events-none"></div>
+                
+                {/* Floating Emojis */}
+                <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl">
+                  {EMOJI_CONFIG_ZELADOR.map((conf, i) => (
+                    <div
+                      key={i}
+                      className={`absolute bottom-0 emoji-float ${conf.size}`}
+                      style={{
+                        left: conf.left,
+                        animationDelay: conf.delay,
+                        animationDuration: conf.duration,
+                        textShadow: "0 2px 10px rgba(0,0,0,0.2)"
+                      }}
+                    >
+                      {conf.emoji}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
