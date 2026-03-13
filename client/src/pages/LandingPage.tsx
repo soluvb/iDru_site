@@ -13,7 +13,7 @@ import {
 
 import zeladorChuva from "@assets/Zelador_chuva_1773424579435.jpg";
 import graficoIdruCompleto from "@assets/Gráfico_iDru_completo_1773424579438.png";
-import semAgua from "@assets/Sem_água_1773424579441.png";
+import semAgua from "@assets/Sem_água_site_1773427357418.png";
 import versaoDevice from "@assets/Versão_2_jan26_1773424579443.jpg";
 
 const WhatsappIcon = ({ className }: { className?: string }) => (
