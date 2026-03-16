@@ -134,7 +134,7 @@ export default function LandingPage() {
           </nav>
           
           <a 
-            href={whatsappUrl}
+            href="https://con.idru.com.br/i1"
             className="hidden sm:flex items-center gap-2 bg-idru-whatsapp text-white rounded-full px-5 py-2.5 font-semibold text-[15px] hover:bg-[#1fba58] hover:-translate-y-0.5 transition-all shadow-sm"
           >
             Fale pelo WhatsApp
@@ -163,7 +163,7 @@ export default function LandingPage() {
               
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                 <a 
-                  href={whatsappUrl}
+                  href="https://con.idru.com.br/i1"
                   className="bg-idru-blue text-white rounded-full px-9 py-4 font-semibold text-[15px] hover:bg-[#1D4ED8] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)] transition-all flex items-center gap-2"
                 >
                   Assuma o controle da água!
