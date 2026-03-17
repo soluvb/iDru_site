@@ -96,23 +96,28 @@ export default function LandingPage() {
   const faqs = [
     {
       q: "Quanto custa instalar a iDru?",
-      a: "Planos a partir de R$ 0,99 por apartamento."
+      a: "Planos a partir de R$ 0,99 por apartamento.",
+      link: "https://con.idru.com.br/svalor"
     },
     {
       q: "Precisa quebrar alguma tubulação?",
-      a: "Sem quebrar canos. Nossos sensores importados são instalados sem gerar mudanças estruturais nas caixas e cisternas."
+      a: "Sem quebrar canos. Nossos sensores importados são instalados sem gerar mudanças estruturais nas caixas e cisternas.",
+      link: "https://con.idru.com.br/squebra"
     },
     {
       q: "Funciona em qualquer reservatório?",
-      a: "Qualquer reservatório e de qualquer tamanho. Como nós fazemos a instalação, garantimos que a aferição está sendo feita de forma correta."
+      a: "Qualquer reservatório e de qualquer tamanho. Como nós fazemos a instalação, garantimos que a aferição está sendo feita de forma correta.",
+      link: "https://con.idru.com.br/squalquer"
     },
     {
       q: "Como recebo os alertas?",
-      a: "Oferecemos um app próprio, feito especificamente para esse tipo de mensagem, para evitar conflito com outros apps do dia a dia."
+      a: "Oferecemos um app próprio, feito especificamente para esse tipo de mensagem, para evitar conflito com outros apps do dia a dia.",
+      link: "https://con.idru.com.br/salertas"
     },
     {
       q: "O que acontece se faltar internet?",
-      a: "Os sensores continuam coletando os dados, mesmo sem sinal! Assim que o dispositivo volta a ter acesso novamente, os dados coletados são sincronizados com o app."
+      a: "Os sensores continuam coletando os dados, mesmo sem sinal! Assim que o dispositivo volta a ter acesso novamente, os dados coletados são sincronizados com o app.",
+      link: "https://con.idru.com.br/sinter"
     }
   ];
 
@@ -337,7 +342,7 @@ export default function LandingPage() {
                           {faq.a}
                         </p>
                         <a 
-                          href={whatsappUrl} 
+                          href={faq.link || whatsappUrl} 
                           target="_blank" 
                           rel="noreferrer"
                           className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-idru-blue hover:text-[#1D4ED8] hover:underline"
@@ -353,7 +358,7 @@ export default function LandingPage() {
               
               <div className="p-4 border-t border-idru-slate-100 bg-idru-bg-a">
                 <a 
-                  href={whatsappUrl}
+                  href="https://con.idru.com.br/soutras"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between w-full bg-white border border-idru-slate-200 rounded-full px-5 py-3 text-idru-slate-500 hover:border-idru-blue hover:text-idru-blue hover:shadow-sm transition-all group"
@@ -509,7 +514,7 @@ export default function LandingPage() {
                 
                 <div className="relative z-10 shrink-0 w-full md:w-auto">
                   <a 
-                    href={whatsappUrl}
+                    href="https://con.idru.com.br/sja"
                     className="flex w-full md:w-auto items-center justify-center gap-2 bg-white text-idru-blue rounded-full px-8 py-4 font-bold text-[16px] hover:bg-blue-50 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(255,255,255,0.2)] transition-all"
                   >
                     Começar agora
@@ -520,7 +525,7 @@ export default function LandingPage() {
             </div>
             
             <a 
-              href={whatsappUrl}
+              href="https://con.idru.com.br/sja"
               className="inline-flex items-center gap-2 bg-idru-blue text-white rounded-full px-9 py-4 font-semibold text-[15px] hover:bg-[#1D4ED8] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)] transition-all"
             >
               Quero assumir o controle da água!
@@ -546,7 +551,7 @@ export default function LandingPage() {
                   
                   <div>
                     <a 
-                      href={whatsappUrl}
+                      href="https://con.idru.com.br/sagenda"
                       className="inline-flex items-center gap-3 bg-idru-whatsapp text-white rounded-full px-8 py-4 font-bold text-[16px] hover:bg-[#1fba58] hover:-translate-y-1 hover:shadow-lg transition-all"
                     >
                       <WhatsappIcon className="w-6 h-6" />
