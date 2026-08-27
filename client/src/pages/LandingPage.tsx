@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 import zeladorChuva from "@assets/Zelador_chuva_site_1773428455055.png";
-import graficoIdru from "@assets/Gráfico_iDru_1773427982000.png";
+import appScreenshot from "@assets/Gráfico_iDru_app.webp";
 import semAgua from "@assets/Sem_água_site_1773427357418.png";
 import versaoDevice from "@assets/Versão_2_jan26_1773424579443.jpg";
 import tiagoIcon from "@assets/image_1773432433488.png";
@@ -238,9 +238,9 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-idru-blue-subtle/50 rounded-[2.5rem] transform -rotate-2 scale-105 max-w-[340px] mx-auto"></div>
                 <div className="relative z-10 w-full max-w-[340px]">
                   <img 
-                    src={graficoIdru} 
-                    alt="Gráfico de monitoramento iDru" 
-                    className="w-full rounded-3xl shadow-[0_16px_48px_rgba(0,0,0,0.10)] border border-idru-slate-200"
+                    src={appScreenshot}
+                    alt="Tela do app iDru com histórico de nível do reservatório"
+                    className="w-full max-w-[270px] mx-auto rounded-3xl shadow-[0_16px_48px_rgba(0,0,0,0.10)] border border-idru-slate-200"
                   />
                   
                   {/* Floating badges */}
