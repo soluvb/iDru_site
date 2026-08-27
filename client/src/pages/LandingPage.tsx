@@ -90,36 +90,34 @@ const EMOJI_CONFIG_ZELADOR = [
 ];
 
 export default function LandingPage() {
-  const appUrl = "https://app.idru.com.br";
   const whatsappUrl = "https://wa.me/5547999999999";
-  const whatsappContactUrl = "https://con.idru.com.br/i1";
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
   const faqs = [
     {
       q: "Quanto custa instalar a iDru?",
       a: "Planos a partir de R$ 0,99 por apartamento.",
-      link: "https://con.idru.com.br/svalor"
+      link: "https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site+do+iDru+e+gostaria+de+saber+valores&type=phone_number&app_absent=0"
     },
     {
       q: "Precisa quebrar alguma tubulação?",
       a: "Sem quebrar canos. Nossos sensores importados são instalados sem gerar mudanças estruturais nas caixas e cisternas.",
-      link: "https://con.idru.com.br/squebra"
+      link: "https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site+e+gostaria+de+saber+%C3%A9%20necess%C3%A1rio%20quebrar%20canos%20para%20instalardo+o%20iDru&type=phone_number&app_absent=0"
     },
     {
       q: "Funciona em qualquer reservatório?",
       a: "Qualquer reservatório e de qualquer tamanho. Como nós fazemos a instalação, garantimos que a aferição está sendo feita de forma correta.",
-      link: "https://con.idru.com.br/squalquer"
+      link: "https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site+e+gostaria+de+saber%20se%20o%20iDru%20funciona%20em%20qualquer%20reservat%C3%B3rio&type=phone_number&app_absent=0"
     },
     {
       q: "Como recebo os alertas?",
       a: "Oferecemos um app próprio, feito especificamente para esse tipo de mensagem, para evitar conflito com outros apps do dia a dia.",
-      link: "https://con.idru.com.br/salertas"
+      link: "https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site+e+gostaria+de+saber%20como%20o%20iDru%20envia%20alertas"
     },
     {
       q: "O que acontece se faltar internet?",
       a: "Os sensores continuam coletando os dados, mesmo sem sinal! Assim que o dispositivo volta a ter acesso novamente, os dados coletados são sincronizados com o app.",
-      link: "https://con.idru.com.br/sinter"
+      link: "https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site+e+gostaria+de+saber%20o%20que%20acontece%20com%20o%20iDru%20quando%20falta%20internet"
     }
   ];
 
@@ -140,24 +138,24 @@ export default function LandingPage() {
             <a href="#contato" className="hover:text-idru-blue transition-colors">Contato</a>
           </nav>
           
-          <div className="flex items-center gap-2">
-            <a
-              href={appUrl}
-              className="inline-flex items-center justify-center bg-idru-blue text-white rounded-full px-4 sm:px-5 py-2.5 font-semibold text-[14px] sm:text-[15px] hover:bg-[#1D4ED8] hover:-translate-y-0.5 transition-all shadow-sm"
-            >
-              Entrar
-            </a>
-            <a
-              href={whatsappContactUrl}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Fale pelo WhatsApp"
-              title="Fale pelo WhatsApp"
-              className="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-idru-whatsapp text-white rounded-full hover:bg-[#1fba58] hover:-translate-y-0.5 transition-all shadow-sm"
-            >
-              <WhatsappIcon className="w-5 h-5 sm:w-6 sm:h-6" />
-            </a>
-          </div>
+         <div className="flex items-center gap-2">
+  <a
+    href="https://app.idru.com.br"
+    className="inline-flex items-center justify-center bg-idru-blue text-white rounded-full px-4 sm:px-5 py-2.5 font-semibold text-[14px] sm:text-[15px] hover:bg-[#1D4ED8] hover:-translate-y-0.5 transition-all shadow-sm"
+  >
+    Entrar
+  </a>
+  <a
+    href="https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site%20do%20iDru%20e%20quero%20instalar%20no%20meu%20condom%C3%ADnio"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Fale pelo WhatsApp"
+    title="Fale pelo WhatsApp"
+    className="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-idru-whatsapp text-white rounded-full hover:bg-[#1fba58] hover:-translate-y-0.5 transition-all shadow-sm"
+  >
+    <WhatsappIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+  </a>
+</div>
         </div>
       </header>
       <main>
@@ -180,18 +178,12 @@ export default function LandingPage() {
                 Reduza reclamações e evite surpresas com monitoramento inteligente dos reservatórios do seu condomínio.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                 <a 
-                  href="https://con.idru.com.br/i1"
+                  href="https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site%20do%20iDru%20e%20quero%20instalar%20no%20meu%20condom%C3%ADnio"
                   className="bg-idru-blue text-white rounded-full px-9 py-4 font-semibold text-[15px] hover:bg-[#1D4ED8] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)] transition-all flex items-center gap-2"
                 >
                   Assuma o controle da água!
-                </a>
-                <a
-                  href={appUrl}
-                  className="inline-flex items-center justify-center border-2 border-idru-blue text-idru-blue rounded-full px-8 py-3.5 font-semibold text-[15px] hover:bg-idru-blue hover:text-white hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.20)] transition-all"
-                >
-                  Entrar
                 </a>
                 <a href="#como-funciona" className="text-idru-blue font-semibold text-[15px] hover:underline flex items-center gap-1 group">
                   Ver como funciona <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -378,7 +370,7 @@ export default function LandingPage() {
               
               <div className="p-4 border-t border-idru-slate-100 bg-idru-bg-a">
                 <a 
-                  href="https://con.idru.com.br/soutras"
+                  href="https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site+e+gostaria+de+saber%20mais%20sobre%20o%20iDru"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between w-full bg-white border border-idru-slate-200 rounded-full px-5 py-3 text-idru-slate-500 hover:border-idru-blue hover:text-idru-blue hover:shadow-sm transition-all group"
@@ -534,7 +526,7 @@ export default function LandingPage() {
                 
                 <div className="relative z-10 shrink-0 w-full md:w-auto">
                   <a 
-                    href="https://con.idru.com.br/sja"
+                    href="https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site%20do%20iDru%20e%20quero%20instalar%20no%20meu%20condom%C3%ADnio"
                     className="flex w-full md:w-auto items-center justify-center gap-2 bg-white text-idru-blue rounded-full px-8 py-4 font-bold text-[16px] hover:bg-blue-50 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(255,255,255,0.2)] transition-all"
                   >
                     Começar agora
@@ -545,7 +537,7 @@ export default function LandingPage() {
             </div>
             
             <a 
-              href="https://con.idru.com.br/sja"
+              href="https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site%20do%20iDru%20e%20quero%20instalar%20no%20meu%20condom%C3%ADnio"
               className="inline-flex items-center gap-2 bg-idru-blue text-white rounded-full px-9 py-4 font-semibold text-[15px] hover:bg-[#1D4ED8] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)] transition-all"
             >
               Quero assumir o controle da água!
@@ -571,7 +563,7 @@ export default function LandingPage() {
                   
                   <div>
                     <a 
-                      href="https://con.idru.com.br/sagenda"
+                      href="https://api.whatsapp.com/send/?phone=5514997955843&text=Ol%C3%A1%2C+encontrei+seu+contato+no+site%20do%20iDru%20agendar%20uma%20avalia%C3%A7%C3%A3o"
                       className="inline-flex items-center gap-3 bg-idru-whatsapp text-white rounded-full px-8 py-4 font-bold text-[16px] hover:bg-[#1fba58] hover:-translate-y-1 hover:shadow-lg transition-all"
                     >
                       <WhatsappIcon className="w-6 h-6" />
