@@ -90,7 +90,9 @@ const EMOJI_CONFIG_ZELADOR = [
 ];
 
 export default function LandingPage() {
+  const appUrl = "https://app.idru.com.br";
   const whatsappUrl = "https://wa.me/5547999999999";
+  const whatsappContactUrl = "https://con.idru.com.br/i1";
   const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
   const faqs = [
@@ -138,12 +140,24 @@ export default function LandingPage() {
             <a href="#contato" className="hover:text-idru-blue transition-colors">Contato</a>
           </nav>
           
-          <a 
-            href="https://con.idru.com.br/i1"
-            className="hidden sm:flex items-center gap-2 bg-idru-whatsapp text-white rounded-full px-5 py-2.5 font-semibold text-[15px] hover:bg-[#1fba58] hover:-translate-y-0.5 transition-all shadow-sm"
-          >
-            Fale pelo WhatsApp
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href={appUrl}
+              className="inline-flex items-center justify-center bg-idru-blue text-white rounded-full px-4 sm:px-5 py-2.5 font-semibold text-[14px] sm:text-[15px] hover:bg-[#1D4ED8] hover:-translate-y-0.5 transition-all shadow-sm"
+            >
+              Entrar
+            </a>
+            <a
+              href={whatsappContactUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Fale pelo WhatsApp"
+              title="Fale pelo WhatsApp"
+              className="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-idru-whatsapp text-white rounded-full hover:bg-[#1fba58] hover:-translate-y-0.5 transition-all shadow-sm"
+            >
+              <WhatsappIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+            </a>
+          </div>
         </div>
       </header>
       <main>
@@ -166,12 +180,18 @@ export default function LandingPage() {
                 Reduza reclamações e evite surpresas com monitoramento inteligente dos reservatórios do seu condomínio.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
                 <a 
                   href="https://con.idru.com.br/i1"
                   className="bg-idru-blue text-white rounded-full px-9 py-4 font-semibold text-[15px] hover:bg-[#1D4ED8] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)] transition-all flex items-center gap-2"
                 >
                   Assuma o controle da água!
+                </a>
+                <a
+                  href={appUrl}
+                  className="inline-flex items-center justify-center border-2 border-idru-blue text-idru-blue rounded-full px-8 py-3.5 font-semibold text-[15px] hover:bg-idru-blue hover:text-white hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(37,99,235,0.20)] transition-all"
+                >
+                  Entrar
                 </a>
                 <a href="#como-funciona" className="text-idru-blue font-semibold text-[15px] hover:underline flex items-center gap-1 group">
                   Ver como funciona <span className="group-hover:translate-x-1 transition-transform">→</span>
